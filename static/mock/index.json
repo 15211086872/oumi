@@ -1,0 +1,161 @@
+{
+    "ret": true,
+    "data": {
+      "city": "广州",  
+      "swiperList": [{
+        "id": "0001",
+        "imgUrl":"http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20196/818f6cc784ae6669b74bbbb255414a53.jpg_750x200_66ca5873.jpg"
+    },  {
+        "id": "0002",
+        "imgUrl":"http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/87a224d0349d94a11e97f31aa1aba4f5.jpg_750x200_1f78af87.jpg"
+    },
+    {
+        "id": "0003",
+        "imgUrl":"http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/d7bbc21db442366a882e04ddc984669a.jpg_750x200_85e640d9.jpg"
+    },
+    {
+        "id": "0004",
+        "imgUrl":"http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20197/f1641e6d73cf33bb00e9431ef4b5fc64.jpg_750x200_91c6f43a.jpg"
+    },
+    {
+        "id": "0005",
+        "imgUrl":"http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20196/c36914f22fdb82d2b8878cbf6dddac98.jpg_750x200_4a63da4b.jpg"
+    },
+    {
+        "id": "0006",
+        "imgUrl":"http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20197/82fd1a5457649a9c43b82eb36a7bbc86.jpg_750x200_27211d2d.jpg"
+    },
+    {
+        "id": "0007",
+        "imgUrl":"http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20197/08797640fb1fd0b161f0836716ac2008.jpg_750x200_9454b04c.jpg"
+    }
+    ],
+    "iconsList": [
+      {
+        "id": "0001",
+        "imgUrl":
+          "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
+        "desc": "景点门票"
+      },
+      {
+        "id": "0002",
+        "imgUrl":
+          "http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png",
+        "desc": "广州必游"
+      },
+      {
+        "id": "0003",
+        "imgUrl":
+          "http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png",
+        "desc": "动植物园"
+      },
+      {
+        "id": "0004",
+        "imgUrl":
+          "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/a40ee278d67000f2a29d2e20f6a029b3.png",
+        "desc": "自然风光"
+      },
+      {
+        "id": "0005",
+        "imgUrl":
+          "http://img1.qunarzz.com/piao/fusion/1803/3e/86314b2af03b7502.png",
+        "desc": "珠江夜游"
+      },
+      {
+        "id": "0006",
+        "imgUrl":
+          "http://img1.qunarzz.com/piao/fusion/1803/3e/86314b2af03b7502.png",
+        "desc": "水上乐园"
+      },
+      {
+        "id": "0007",
+        "imgUrl":
+          "http://img1.qunarzz.com/piao/fusion/1803/50/26ffa31b56646402.png",
+        "desc": "亲子游"
+      },
+      {
+        "id": "0008",
+        "imgUrl":
+          "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/184e261814a5d07a5d3d08cd29cf590d.png",
+        "desc": "长隆度假区"
+      },
+        {
+        "id": "0009",
+        "imgUrl":
+          "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/c032ae43b15a3dac34b5e07bb0e46850.png",
+        "desc": "广州塔"
+      },
+        {
+          "id": "0010",
+          "imgUrl": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/bda58ffc3016edad84e656e8a94b0321.png",
+          "desc": "广州融创"
+        }
+    ],
+    "recommendList": [{
+      "id": "0001",
+      "imgUrl": "http://img1.qunarzz.com/sight/p0/1709/41/411f234d79457081a3.img.jpg_200x200_ea02ef99.jpg",
+      "title": "长隆野生动物世界",
+      "desc": "位于番禺大道长隆旅游度假区，一起探索动物的奥秘"
+  },
+  {
+      "id": "0002",
+      "imgUrl": "http://img1.qunarzz.com/sight/p0/1707/88/889ae02b07140066a3.img.jpg_200x200_d3b1427c.jpg",
+      "title": "长隆欢乐世界",
+     "desc": "爱挑战的你怎能错过垂直过山车"
+  },
+  {
+      "id": "0003",
+      "imgUrl": "http://img1.qunarzz.com/sight/p0/1504/3d/3d096f06abb5c7a5.water.jpg_200x200_f62c3108.jpg",
+      "title": "都喜泰丽温泉度假酒店",
+      "desc": "帅的人都去过了😎，你还等什么~"
+  },
+  {
+      "id": "0004",
+      "imgUrl": "http://img1.qunarzz.com/sight/p0/1707/d8/d89ab1a9b2ab355ba3.img.jpg_200x200_8fc1af97.jpg",
+      "title": "长隆水上乐园",
+      "desc": "“巨蟒”滑道带给你肾上腺素的冲击"
+      
+  },
+   {
+      "id": "0005",
+      "imgUrl": "http://img1.qunarzz.com/sight/p0/1507/72/72d087ebb95580c2.img.jpg_200x200_4f9d01ca.jpg",
+      "title": "南沙湿地公园",
+      "desc": "赏田田荷叶，看红树苇影，观掠水候鸟"
+      
+  }
+  ],
+  "weekendList": [{
+    "id": "0001",
+    "imgUrl": "http://img1.qunarzz.com/sight/source/1811/15/66f14e0fd6fbb.jpg_r_640x214_5d69f21d.jpg",
+    "title": "清远周边逛",
+    "desc": "人人都有一双发现美的眼睛，身边的事物最熟悉不过，那你可曾发现了被人遗漏的美？"
+},
+{
+    "id": "0002",
+    "imgUrl": "http://img1.qunarzz.com/sight/source/1811/b8/5d599bbdcf8b57.jpg_r_640x214_2ee055e3.jpg",
+    "title": "浮在海上的绿洲",
+    "desc": "南国滨海之城，避寒胜地，有暖暖的阳光，海风习习，吃着海鲜逛逛老街多惬意啊"
+},
+{
+    "id": "0003",
+    "imgUrl": "http://img1.qunarzz.com/sight/source/1505/92/580e9ea4f37a1b.jpg_r_640x214_72112761.jpg",
+    "title": "广州必打卡",
+    "desc": "感受现代与传统相融合的广州~"
+},
+{
+    "id": "0004",
+    "imgUrl": "http://img1.qunarzz.com/sight/source/1811/f8/29dfa785277839.jpg_r_640x214_7d051523.jpg",
+    "title": "阳江温泉知多少",
+    "desc": "这里的天空和大海让人心旷神怡，配上舒缓的优美音乐，泡个暖暖的温泉岂不美哉"
+    
+},
+ {
+    "id": "0005",
+    "imgUrl": "http://img1.qunarzz.com/sight/source/1812/47/cbdc44f461db0d.jpg_r_640x214_aab1da76.jpg",
+    "title": "珠江夜游",
+    "desc": "绚烂的霓虹将珠江照亮，跳上一艘游船，沉浸在这醉人的夜色中..."
+    
+}
+]
+    }
+  }
