@@ -1,8 +1,12 @@
 <!--  -->
 <template>
 <ul class="list">
-    <li class="item" v-for="(item,key) of cities" :key="key" @click="handleLetterClick">
-        {{key}}
+    <li class="item" v-for="item of letters" :key="item" :ref="item"
+    @click="handleLetterClick"
+    @touchstart="handleTouchStart"
+    @touchmove="handleTouchMove"
+    @touchend="handleTouchEnd">
+        {{item}}
         </li>
    
 </ul>
@@ -25,11 +29,21 @@ components: {},
 data() {
 //这里存放数据
 return {
+    touchStatus: false,
+    startY: 0,
+    timer: 0
 
 };
 },
 //监听属性 类似于data概念
-computed: {},
+computed: {
+    letters(){
+        const letters= []
+        for (let i in this.cities){
+            letters.push(i)
+        } return letters
+    } 
+},
 //监控data中的数据变化
 watch: {},
 //方法集合 专门存放方法比如点击事件
@@ -37,6 +51,26 @@ methods: {
     handleLetterClick(e){
         this.$emit('change',e.target.innerText)
 
+    },
+    handleTouchStart(){
+       this.touchStatus = true
+    },
+    handleTouchMove(e) {
+       if(this.touchStatus) {
+           
+           const touchY = e.touches[0].clientY - 79
+           const index = Math.floor((touchY - this.startY)/ 20)
+          
+           
+           if(index >= 0 && index < this.letters.length) {
+           this.$emit('change', this.letters[index])
+           }
+
+
+       }
+    },
+    handleTouchEnd(){
+       this.touchStatus = false
     }
 
 },
@@ -52,7 +86,9 @@ mounted() {
 beforeCreate() {}, //生命周期 - 创建之前
 beforeMount() {}, //生命周期 - 挂载之前
 beforeUpdate() {}, //生命周期 - 更新之前
-updated() {}, //生命周期 - 更新之后
+updated() {
+    const startY = this.$refs['A'][0].offsetTop
+}, //生命周期 - 更新之后
 beforeDestroy() {}, //生命周期 - 销毁之前
 destroyed() {}, //生命周期 - 销毁完成
 activated() {}, //如果页面有keep-alive缓存功能，这个函数会触发

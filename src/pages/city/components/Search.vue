@@ -1,8 +1,16 @@
 <!--  -->
 <template>
+<div>
 <div class='search'>
-    <input class="search-input" type="text" placeholder="输入城市名或拼音"/>
- 
+    <input v-model="keyworld" class="search-input" type="text" placeholder="输入城市名或拼音"/>
+    <div class="search-content" v-show="keyworld" >
+        <ul>
+            <li class="search-item border-bottom" v-for="item of list" :key="item.id" @click="handleCityClick(item.name)">{{item.name}}</li>
+            <li class="search-item border-bottom" v-show="hasNOdata">没有找到匹配数据</li>
+        </ul>
+
+    </div>    
+</div> 
 </div>
 </template>
 
@@ -13,21 +21,61 @@
 
 export default {
 name:'CitySearch',
+props: {
+    cities: Object
+},
 //import引入的组件需要注入到对象中才能使用
 components: {},
 data() {
 //这里存放数据
 return {
+    keyworld: '',
+    list: [],
+    timer: null
 
 };
 },
 //监听属性 类似于data概念
-computed: {},
+computed: {
+    hasNOdata () {
+        return !this.list.length
+         
+             
+         
+    }
+},
 //监控data中的数据变化
-watch: {},
+watch: {
+    keyworld () {
+        if(this.timer){
+            clearTimeout(this.timer)
+        }
+        if(!this.keyworld){
+            this.list=[]
+            return
+        }
+        this.timer = setTimeout(() => {
+            const result = []
+            for (let i in this.cities) { 
+                this.cities[i].forEach((value) => {
+                    if (value.spell.indexOf(this.keyworld) > -1 || value.name.indexOf(this.keyworld) > -1){
+                        result.push(value)
+                    }    
+                })
+            }
+            this.list = result
+
+
+        },100)
+    }
+},
 //方法集合 专门存放方法比如点击事件
 methods: {
-
+    handleCityClick (city) {
+        this.$store.commit('changeCity',city)
+        this.$router.push('/')
+        
+    }
 },
 //生命周期 - 创建完成（可以访问当前this实例）
 created() {
@@ -60,5 +108,19 @@ activated() {}, //如果页面有keep-alive缓存功能，这个函数会触发
       text-align: center
       border-radius: .06rem
       color: #666
-
+.search-content
+   position: absolute 
+   z-index: 1
+   over-flow: hidden
+   top: 1.58rem
+   left: 0
+   right: 0
+   bottom: 0
+   background: #eeeeee
+   .search-item
+      line-height: .62rem
+      padding-left: .2rem
+      color: #666
+      background: #ffffff
+    
 </style>
