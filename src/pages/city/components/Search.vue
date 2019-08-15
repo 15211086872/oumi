@@ -3,7 +3,7 @@
 <div>
 <div class='search'>
     <input v-model="keyworld" class="search-input" type="text" placeholder="输入城市名或拼音"/>
-    <div class="search-content" v-show="keyworld" >
+    <div class="search-content" v-show="keyworld" ref="search">
         <ul>
             <li class="search-item border-bottom" v-for="item of list" :key="item.id" @click="handleCityClick(item.name)">{{item.name}}</li>
             <li class="search-item border-bottom" v-show="hasNOdata">没有找到匹配数据</li>
@@ -15,6 +15,7 @@
 </template>
 
 <script>
+import Bscroll from 'better-scroll'
 //这里可以导入其他文件（比如：组件，工具js，第三方插件js，json文件，图片文件等等）
 //例如：import 《组件名称》 from '《组件路径》';
 //import Swiper from "swiper";
@@ -83,6 +84,7 @@ created() {
 },
 //生命周期 - 挂载完成（可以访问DOM元素）
 mounted() {
+    this.scroll= new Bscroll (this.$refs.search)
 //this.getData();//加载完后执行getData这个函数
 
 },
@@ -101,6 +103,7 @@ activated() {}, //如果页面有keep-alive缓存功能，这个函数会触发
    padding 0 .2rem
    background #00bcd4
    .search-input
+  
       box-sizing: border-box
       width: 100%
       height: .62rem

@@ -55,25 +55,27 @@ methods: {
     handleTouchStart(){
        this.touchStatus = true
     },
-    handleTouchMove(e) {
-       if(this.touchStatus) {
-           
-           const touchY = e.touches[0].clientY - 79
-           const index = Math.floor((touchY - this.startY)/ 20)
-          
-           
-           if(index >= 0 && index < this.letters.length) {
-           this.$emit('change', this.letters[index])
-           }
-
-
-       }
+   handleTouchMove (e) {
+      if (this.touchStatus) {
+        if (this.timer) {
+          clearTimeout(this.timer)
+        }
+        this.timer = setTimeout(() => {
+          const touchY = e.touches[0].clientY - 79
+          const index = Math.floor((touchY - this.startY) / 20)
+          if (index >= 0 && index < this.letters.length) {
+            this.$emit('change', this.letters[index])
+          }
+        }, 16)
+      }
     },
-    handleTouchEnd(){
-       this.touchStatus = false
+    handleTouchEnd () {
+      this.touchStatus = false
     }
+  },
 
-},
+
+
 //生命周期 - 创建完成（可以访问当前this实例）
 created() {
 
